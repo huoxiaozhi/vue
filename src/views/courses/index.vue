@@ -7,7 +7,7 @@
             <h3>课表</h3>
           </center>
           <el-table v-loading="coursesLoading" :data="classtablelist" border size="small" :fit="true">
-            <el-table-column fixed="right" align="center" width="48px" type="index" :index="classtable_indexMethod" />
+            <el-table-column fixed="right" align="center" type="index" width="35px" />
             <el-table-column fixed="right" align="center" prop="0" label="周一" />
             <el-table-column fixed="right" align="center" prop="1" label="周二" />
             <el-table-column fixed="right" align="center" prop="2" label="周三" />
@@ -328,9 +328,6 @@ export default {
         }
       }
       return temp_arr2
-    },
-    classtable_indexMethod(index) {
-      return index + 1
     }
   }
 }

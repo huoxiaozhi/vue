@@ -56,14 +56,27 @@ export const constantRoutes = [
   },
 
   {
-    path: '/courses',
+    path: '/allcourse',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'School Timetable',
+        component: () => import('@/views/allcourses/index'),
+        meta: { title: '学期课表', icon: 'table' }
+      }
+    ]
+  },
+
+  {
+    path: '/courseManage',
     component: Layout,
     children: [
       {
         path: 'index',
         name: 'Courses',
         component: () => import('@/views/courses/index'),
-        meta: { title: 'Courses', icon: 'table' }
+        meta: { title: '选修课程', icon: 'table' }
       }
     ]
   },
